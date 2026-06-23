@@ -40,11 +40,11 @@ export const weaknesses = [
 ];
 
 export const radarData = [
-  { axis: "Usability", current: 54, target: 90 },
-  { axis: "Accessibility", current: 42, target: 92 },
+  { axis: "Usability", current: 64, target: 90 },
+  { axis: "Accessibility", current: 52, target: 92 },
   { axis: "SEO", current: 64, target: 90 },
   { axis: "Mobile", current: 58, target: 88 },
-  { axis: "Conversion", current: 38, target: 88 },
+  { axis: "Conversion", current: 50, target: 88 },
   { axis: "Trust", current: 52, target: 92 },
   { axis: "IA", current: 48, target: 90 },
 ];
