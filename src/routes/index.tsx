@@ -1105,7 +1105,7 @@ function ProjectionSection() {
     <Section
       id="projection"
       eyebrow="15 · Final Score Projection"
-      title="From 71 to 92 in three phases."
+      title="From 61 to 88 in three phases."
     >
       <Card>
         <div className="grid sm:grid-cols-4 gap-6">
