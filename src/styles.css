@@ -1,0 +1,160 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "SF Pro Display", "Inter", "Helvetica Neue", system-ui, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 28px;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-card-foreground: var(--foreground);
+  --color-surface: var(--surface);
+
+  --color-primary: var(--foreground);
+  --color-primary-foreground: var(--background);
+  --color-secondary: var(--muted);
+  --color-secondary-foreground: var(--foreground);
+  --color-accent: var(--muted);
+  --color-accent-foreground: var(--foreground);
+  --color-popover: var(--card);
+  --color-popover-foreground: var(--foreground);
+  --color-input: var(--border);
+  --color-ring: var(--foreground);
+
+  --color-critical: var(--critical);
+  --color-major: var(--major);
+  --color-minor: var(--minor);
+  --color-success: var(--success);
+
+  --color-destructive: var(--critical);
+  --color-destructive-foreground: #ffffff;
+
+  --color-chart-1: var(--foreground);
+  --color-chart-2: var(--muted-foreground);
+  --color-chart-3: var(--minor);
+  --color-chart-4: var(--major);
+  --color-chart-5: var(--success);
+}
+
+:root {
+  --background: #FAFAF8;
+  --surface: #FFFFFF;
+  --foreground: #121212;
+  --muted: #F3F2EE;
+  --muted-foreground: #6B7280;
+  --border: #EAEAEA;
+  --card: #FFFFFF;
+
+  --critical: #EF4444;
+  --major: #F59E0B;
+  --minor: #3B82F6;
+  --success: #10B981;
+
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #121212;
+  --sidebar-primary: #121212;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F3F2EE;
+  --sidebar-accent-foreground: #121212;
+  --sidebar-border: #EAEAEA;
+  --sidebar-ring: #121212;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    font-weight: 600;
+  }
+
+  ::selection {
+    background: var(--foreground);
+    color: var(--background);
+  }
+}
+
+@utility text-display {
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+}
+
+@utility text-h1 {
+  font-size: clamp(32px, 4.2vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+
+@utility text-h2 {
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+
+@utility text-h3 {
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+@utility text-body {
+  font-size: 17px;
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+}
+
+@utility text-small {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@utility text-caption {
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+@utility audit-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px;
+}
+
+@utility hairline {
+  border-color: var(--border);
+}
